@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="774d77be-ba60-4d0b-9ec8-40e58844fe36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Venturecraft/Revisionable/Revisionable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Venturecraft/Revisionable/Revisionable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Venturecraft/Revisionable/RevisionableTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Venturecraft/Revisionable/RevisionableTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/migrations/2013_04_09_062329_create_revisions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/migrations/2013_04_09_062329_create_revisions_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +42,7 @@
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="height" value="698" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -121,12 +117,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554776320095</updated>
       <workItem from="1554776321779" duration="519000" />
-      <workItem from="1554786029782" duration="1154000" />
+      <workItem from="1554786029782" duration="1947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1673000" />
+    <option name="totallyTimeSpent" value="2466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
