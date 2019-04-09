@@ -220,9 +220,11 @@ trait RevisionableTrait
             $revisions[] = array(
                 'revisionable_type' => $this->getMorphClass(),
                 'revisionable_id' => $this->getKey(),
-                'key' => self::CREATED_AT,
+                'key' => 'create',
+//                'key' => self::CREATED_AT,
                 'old_value' => null,
-                'new_value' => $this->{self::CREATED_AT},
+                'new_value' => json_encode($this->updatedData),
+//                'new_value' => $this->{self::CREATED_AT},
                 'user_id' => $this->getSystemUserId(),
                 'created_at' => new \DateTime(),
                 'updated_at' => new \DateTime(),
@@ -241,15 +243,18 @@ trait RevisionableTrait
     public function postDelete()
     {
         if ((!isset($this->revisionEnabled) || $this->revisionEnabled)
-            && $this->isSoftDelete()
-            && $this->isRevisionable($this->getDeletedAtColumn())
+//            && $this->isSoftDelete()
+//            && $this->isRevisionable($this->getDeletedAtColumn())
         ) {
             $revisions[] = array(
                 'revisionable_type' => $this->getMorphClass(),
                 'revisionable_id' => $this->getKey(),
-                'key' => $this->getDeletedAtColumn(),
-                'old_value' => null,
-                'new_value' => $this->{$this->getDeletedAtColumn()},
+                'key' => 'delete',
+                'old_value' => json_encode($this->originalData),
+                'new_value' => null,
+//                'key' => $this->getDeletedAtColumn(),
+//                'old_value' => null,
+//                'new_value' => $this->{$this->getDeletedAtColumn()},
                 'user_id' => $this->getSystemUserId(),
                 'created_at' => new \DateTime(),
                 'updated_at' => new \DateTime(),
