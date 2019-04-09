@@ -1,9 +1,9 @@
 {
-    "name": "venturecraft/revisionable",
+    "name": "ciyin/revisionable",
     "license": "MIT",
-    "description": "Keep a revision history for your models without thinking, created as a package for use with Laravel",
+    "description": "fork from venturecraft/revisionable, change soft delete to hard delete",
     "keywords": ["model", "laravel", "ardent", "revision", "history"],
-    "homepage": "http://github.com/venturecraft/revisionable",
+    "homepage": "http://github.com/ciyin/revisionable",
     "authors": [
         {
             "name": "Chris Duell",

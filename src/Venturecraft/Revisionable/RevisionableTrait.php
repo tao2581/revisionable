@@ -178,6 +178,7 @@ trait RevisionableTrait
                 $revisions[] = array(
                     'revisionable_type' => $this->getMorphClass(),
                     'revisionable_id' => $this->getKey(),
+                    'action'=>'update',
                     'key' => $key,
                     'old_value' => array_get($this->originalData, $key),
                     'new_value' => $this->updatedData[$key],
@@ -220,6 +221,7 @@ trait RevisionableTrait
             $revisions[] = array(
                 'revisionable_type' => $this->getMorphClass(),
                 'revisionable_id' => $this->getKey(),
+                'action'=>'create',
                 'key' => 'create',
 //                'key' => self::CREATED_AT,
                 'old_value' => null,
@@ -249,6 +251,7 @@ trait RevisionableTrait
             $revisions[] = array(
                 'revisionable_type' => $this->getMorphClass(),
                 'revisionable_id' => $this->getKey(),
+                'action'=>'delete',
                 'key' => 'delete',
                 'old_value' => json_encode($this->originalData),
                 'new_value' => null,
