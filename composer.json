@@ -4,35 +4,15 @@
     "description": "fork from venturecraft/revisionable, change soft delete to hard delete",
     "keywords": ["model", "laravel", "ardent", "revision", "history"],
     "homepage": "http://github.com/ciyin/revisionable",
-    "authors": [
-        {
-            "name": "Chris Duell",
-            "email": "me@chrisduell.com"
-        }
-    ],
     "abandoned": true,
-    "support": {
-        "issues": "https://github.com/VentureCraft/revisionable/issues",
-        "source": "https://github.com/VentureCraft/revisionable"
-    },
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "~4.0|~5.0|~5.1"
     },
-    "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
-        "psr-0": {
-            "Venturecraft\\Revisionable": "src/"
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "http://github.com/ciyin/revisionable"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Venturecraft\\Revisionable\\Tests\\": "tests/"
-        }
-    },
-    "require-dev": {
-        "orchestra/testbench": "~3.0"
-    }
+    ]
 }
