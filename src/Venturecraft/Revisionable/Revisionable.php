@@ -143,7 +143,6 @@ class Revisionable extends Eloquent
                 $revisions[] = array(
                     'revisionable_type'     => $this->getMorphClass(),
                     'revisionable_id'       => $this->getKey(),
-                    'action' => 'update',
                     'key'                   => $key,
                     'old_value'             => array_get($this->originalData, $key),
                     'new_value'             => $this->updatedData[$key],
@@ -179,10 +178,11 @@ class Revisionable extends Eloquent
             $revisions[] = array(
                 'revisionable_type' => $this->getMorphClass(),
                 'revisionable_id' => $this->getKey(),
-                'action' => 'create',
-                'key' => self::CREATED_AT,
+                'key' =>'create',
+//                'key' => self::CREATED_AT,
                 'old_value' => null,
-                'new_value' => $this->{self::CREATED_AT},
+                'new_value' => json_encode($this->updatedData),
+//                'new_value' => $this->{self::CREATED_AT},
                 'user_id' => $this->getSystemUserId(),
                 'created_at' => new \DateTime(),
                 'updated_at' => new \DateTime(),
@@ -200,15 +200,18 @@ class Revisionable extends Eloquent
     public function postDelete()
     {
         if ((!isset($this->revisionEnabled) || $this->revisionEnabled)
-            && $this->isSoftDelete()
-            && $this->isRevisionable($this->getDeletedAtColumn())) {
+//            && $this->isSoftDelete()
+//            && $this->isRevisionable($this->getDeletedAtColumn())
+        ) {
             $revisions[] = array(
                 'revisionable_type' => $this->getMorphClass(),
                 'revisionable_id' => $this->getKey(),
-                'action' => 'delete',
-                'key' => $this->getDeletedAtColumn(),
-                'old_value' => null,
-                'new_value' => $this->{$this->getDeletedAtColumn()},
+                'key' => 'delete',
+                'old_value' => json_encode($this->originalData),
+                'new_value' => null,
+//                'key' => $this->getDeletedAtColumn(),
+//                'old_value' => null,
+//                'new_value' => $this->{$this->getDeletedAtColumn()},
                 'user_id' => $this->getSystemUserId(),
                 'created_at' => new \DateTime(),
                 'updated_at' => new \DateTime(),

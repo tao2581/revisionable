@@ -31,7 +31,7 @@ Revisionable is installable via [composer](http://getcomposer.org/doc/00-intro.m
 Add the following to the `require` section of your projects composer.json file:
 
 ```php
-"ciyin/revisionable": "1.*",
+"venturecraft/revisionable": "1.*",
 ```
 
 Run composer update to download the package
@@ -43,7 +43,7 @@ php composer.phar update
 Finally, you'll also need to run migration on the package (Laravel 5.x)
 
 ```
-php artisan migrate --path=vendor/ciyin/revisionable/src/migrations
+php artisan migrate --path=vendor/venturecraft/revisionable/src/migrations
 ```
 
 For Laravel 4.x users:
