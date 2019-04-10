@@ -3,16 +3,8 @@
     "license": "MIT",
     "description": "fork from venturecraft/revisionable, change soft delete to hard delete",
     "keywords": ["model", "laravel", "ardent", "revision", "history"],
-    "homepage": "http://github.com/ciyin/revisionable",
-    "abandoned": true,
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "~4.0|~5.0|~5.1"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "http://github.com/ciyin/revisionable"
-        }
-    ]
+    }
 }
